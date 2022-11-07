@@ -97,19 +97,12 @@ class AuthorSellersView(View):
 class BookFilesView(View):
     
     def get(self, request):
-        # book_details = uploaded_files.objects.filter(owner=request.user)
-        # print(book_details)
         msg = request.GET.get("msg")
         context={
             # "book_details": book_details,
             "msg": msg,
         }
         return render(request, 'app1/dashboard.html', context)
-        # if request.user.is_authenticated:
-        #     return render(request, 'app1/dashboard.html', context)
-        #     return render(request, "blogapp/homepage.html")
-        # return HttpResponseRedirect(reverse("app1:login"))
-        # return render(request, 'app1/login.html', {"msg": "Login First ..."})
     
     def post(self, request):
         book_title=request.POST.get("book_title")
@@ -128,10 +121,6 @@ class BookFilesView(View):
 def MyBookDetailsView(request):
     if request.method == 'GET':
         book_details=uploaded_files.objects.filter(owner=request.user)
-        # if uploaded_files.objects.filter(owner=request.user):
-        #     print("True")
-        # else:
-        #     print("False")
         context={ 
             'book_details': book_details,
         }
