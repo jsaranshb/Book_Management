@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.form-box{
+    width: 400px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+}
+.l-container{
+    margin-top: 100px;
+}
+.S-container {
+    margin: 20px 0 10PX 0;
+}
+.user-card {
+    margin: 20px;
+}
+.decor{
+    text-decoration: none;
+}
+.btn1{
+    margin-top: 15px;
+}

@@ -1,0 +1,22 @@
+{% extends 'app1/index.html' %}
+{% load static %}
+
+<!-- CSS only -->
+<link href="{% static 'app1/style2.css' %}" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+{% block sellers-Authors %}
+    {% for detail in details %}
+    <div class="s-container">
+        <div class="user-card">
+            <div class="card usercard1" style="width: 20rem;">
+                <div class="card-body">
+                    <h4 class="card-title">Name: {{detail.fullname}}</h4><hr>
+                    <h5 class="card-text">Email: {{detail.email}}</h5>
+                    <p class="card-text">Address: {{detail.address}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock sellers-Authors %}

@@ -1,0 +1,14 @@
+.user-card {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.usercard1{
+    background-color: bisque;
+}
+
+.S-container {
+    /* display: flex;
+    justify-content: center; */
+    /* align-items: center; */
+    margin: 20px 0 10PX 0;
+}
